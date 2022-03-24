@@ -114,32 +114,5 @@ public class TestandoSwagLabs {
 
        robozinho.quit();
    }
-
-   @Test
-   public void TesteDeLoginValido5(){
-
-      // define o google chrome como navegador
-      System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
-
-      // chama o chrome de robozinho
-      WebDriver robozinho = new ChromeDriver();
-
-      // ACESSAR O SITE
-      robozinho.get("https://www.saucedemo.com/");
-
-      // VERIFICACAO
-      assertEquals("Swag Labs", robozinho.getTitle());
-
-      robozinho.findElement(By.id("user-name")).sendKeys("performance_glitch_user");
-      robozinho.findElement(By.id("password")).sendKeys("secret_sauce");
-      robozinho.findElement(By.id("login-button")).click();
-
-      assertEquals(
-              "PRODUCTS",
-              robozinho.findElement(By.className("title")).getText()
-      );
-
-      robozinho.quit();
-   }
-
+   
 }
